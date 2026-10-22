@@ -16,4 +16,4 @@ def root() -> dict:
 @app.get("/health")
 def health() -> dict:
     """存活探测端点。"""
-    return {"status": "ok", "service": "poc"}
+    return {"status": "ok"}
