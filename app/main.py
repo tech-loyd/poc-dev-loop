@@ -11,3 +11,9 @@ app = FastAPI(title="poc-dev-loop")
 def root() -> dict:
     """冒烟端点：仅证明应用可启动。"""
     return {"repo": "poc-dev-loop", "purpose": "ai-dev-team PoC"}
+
+
+@app.get("/health")
+def health() -> dict:
+    """存活探测端点。"""
+    return {"status": "ok"}
